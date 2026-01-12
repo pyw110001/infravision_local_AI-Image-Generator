@@ -2,7 +2,7 @@ export const WORKFLOW_TEMPLATE = {
   // Checkpoint Loader
   "4": {
     "inputs": {
-      "ckpt_name": "RealVisXL_V3.0.safetensors" // User needs to ensure this exists or we make it selectable
+      "ckpt_name": "juggernautXL_v9Rundiffusionphoto2.safetensors" // User needs to ensure this exists or we make it selectable
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
@@ -57,27 +57,27 @@ export const WORKFLOW_TEMPLATE = {
   // ControlNet Loader
   "11": {
     "inputs": {
-        "control_net_name": "controlnet-canny-sdxl-1.0.fp16.safetensors"
+      "control_net_name": "Union_sdxl_promaxl.safetensors"
     },
     "class_type": "ControlNetLoader",
     "_meta": {
-        "title": "Load ControlNet"
+      "title": "Load ControlNet"
     }
   },
   // ControlNet Apply
   "12": {
     "inputs": {
-        "strength": 0.8, // Dynamic: fidelity
-        "start_percent": 0.0,
-        "end_percent": 1.0,
-        "positive": ["6", 0],
-        "negative": ["7", 0],
-        "control_net": ["11", 0],
-        "image": ["10", 0]
+      "strength": 0.8, // Dynamic: fidelity
+      "start_percent": 0.0,
+      "end_percent": 1.0,
+      "positive": ["6", 0],
+      "negative": ["7", 0],
+      "control_net": ["11", 0],
+      "image": ["10", 0]
     },
     "class_type": "ControlNetApplyAdvanced",
     "_meta": {
-        "title": "Apply ControlNet"
+      "title": "Apply ControlNet"
     }
   },
   // KSampler
@@ -113,7 +113,8 @@ export const WORKFLOW_TEMPLATE = {
   // Save Image (WebSocket output)
   "9": {
     "inputs": {
-      "filename_prefix": "Infravision"
+      "filename_prefix": "Infravision",
+      "images": ["8", 0]
     },
     "class_type": "SaveImage",
     "_meta": {
