@@ -1,0 +1,5 @@
+{
+  "name": "市政AI生图工具 - InfraVision (Local)",
+  "description": "专业的市政基础设施AI可视化工具。后端已适配本地 Fooocus 环境。",
+  "requestFramePermissions": []
+}
