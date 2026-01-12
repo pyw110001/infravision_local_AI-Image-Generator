@@ -1,7 +1,3 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
 # Infravision - 本地 AI 图像生成界面
 
 本项目是一个基于 React/Vite 构建的本地 AI 生成界面，与本地 **ComfyUI** 实例进行交互。
